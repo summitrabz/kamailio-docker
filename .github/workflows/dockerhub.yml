@@ -2,10 +2,16 @@
 name: dockerhub-rabbani
 
 on:
+#  push:
+#    branches:
+#      - '5.*'
   push:
-    branches:
-      - '5.*'
-
+    branches: 
+      - "master"
+  pull_request:
+    branches: 
+      - "master"
+      
 jobs:
   pre-docker:
     runs-on: ubuntu-latest
